@@ -1,0 +1,7 @@
+{
+  "name": "atreeia",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
