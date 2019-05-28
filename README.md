@@ -1,4 +1,5 @@
-<h1> Atresia <h1>
+<h1  align="center">Atresia </h1>
+<h2 align="center">Messenger App</h2>
 
 
 <p align="center">
