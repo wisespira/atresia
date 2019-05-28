@@ -1,5 +1,6 @@
 io.ionic.starter
 int drawable screen 0x7f010000
+int drawable screen1 0x7f010001
 int mipmap ic_launcher1 0x7f020000
 int mipmap icon 0x7f020001
 int string activity_name 0x7f030000

@@ -52,7 +52,7 @@ var Tab3PageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n     Altreeia\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n     <ion-label style=\"\n    text-align: center;\n    width: 100%;\n    display: block;\n    margin-top: 20px;\n\">Money Rased</ion-label>\n    <ion-chip style=\"\n    \n    display: flex;\n    justify-content: center;\n\">\n  <ion-icon name=\"heart\" color=\"dark\"></ion-icon>\n  <ion-label >£113,547.40</ion-label>\n</ion-chip>\n    \n</ion-content>\n"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n     Altreeia\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n     <ion-label style=\"\n    text-align: center;\n    width: 100%;\n    display: block;\n    margin-top: 20px;\n\">Money Rased</ion-label>\n    <ion-chip style=\"\n    \n    display: flex;\n    justify-content: center;\n\">\n  <ion-icon name=\"heart\" color=\"dark\"></ion-icon>\n  <ion-label >£{{money}}</ion-label>\n</ion-chip>\n  <ion-button fill=\"solid\" expand=\"block\" color=\"dark\"  routerLink=\"/login\" style=\"\n    position: absolute;\n    bottom: 0px;\n    width: -webkit-fill-available;\n    height: 10%;\n    margin: 10px;\n\">Login</ion-button>   \n</ion-content>\n"
 
 /***/ }),
 
@@ -83,13 +83,21 @@ __webpack_require__.r(__webpack_exports__);
 
 var Tab3Page = /** @class */ (function () {
     function Tab3Page() {
+        this.money = 113547;
+        this.larry();
     }
+    Tab3Page.prototype.larry = function () {
+        for (var i = 0; i < 5000; i++) {
+            this.money++;
+        }
+    };
     Tab3Page = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-tab3',
             template: __webpack_require__(/*! ./tab3.page.html */ "./src/app/tab3/tab3.page.html"),
             styles: [__webpack_require__(/*! ./tab3.page.scss */ "./src/app/tab3/tab3.page.scss")]
-        })
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], Tab3Page);
     return Tab3Page;
 }());

@@ -845,6 +845,14 @@ var map = {
 		"./src/app/tab3/tab3.module.ts",
 		"tab3-tab3-module"
 	],
+	"./login/login.module": [
+		"./src/app/login/login.module.ts",
+		"login-login-module"
+	],
+	"./registration/registration.module": [
+		"./src/app/registration/registration.module.ts",
+		"registration-registration-module"
+	],
 	"./tabs/tabs.module": [
 		"./src/app/tabs/tabs.module.ts",
 		"tabs-tabs-module"
@@ -889,7 +897,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var routes = [
-    { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' }
+    { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
+    { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+    { path: 'larry/registration', loadChildren: './registration/registration.module#RegistrationPageModule' }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -916,7 +926,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-app>\n  <ion-router-outlet></ion-router-outlet>\n</ion-app>\n"
+module.exports = "<ion-app>\n        <ion-menu>\n      <ion-header>\n        <ion-toolbar>\n          <ion-title>Menu</ion-title>\n        </ion-toolbar>\n      </ion-header>\n      <ion-content>\n        <ion-list>\n          <ion-menu-toggle auto-hide=\"false\" *ngFor=\"let p of appPages\">\n            <ion-item [routerDirection]=\"'root'\" [routerLink]=\"[p.url]\">\n              <ion-icon slot=\"start\" [name]=\"p.icon\"></ion-icon>\n              <ion-label>\n                {{p.title}} \n              </ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n        </ion-list>\n      </ion-content>\n    </ion-menu>\n  <ion-router-outlet></ion-router-outlet>\n</ion-app>\n"
 
 /***/ }),
 
@@ -945,6 +955,22 @@ var AppComponent = /** @class */ (function () {
         this.platform = platform;
         this.splashScreen = splashScreen;
         this.statusBar = statusBar;
+        this.appPages = [
+            {
+                title: 'Home',
+                url: '/home',
+                icon: 'home'
+            },
+            {
+                title: 'News Hub',
+                url: '/list',
+                icon: 'list'
+            }, {
+                title: 'Get a timetable',
+                url: '/timetable',
+                icon: 'calendar'
+            }
+        ];
         this.initializeApp();
     }
     AppComponent.prototype.initializeApp = function () {
